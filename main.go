@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"html/template"
 	"log"
 	"net/http"
 )
@@ -11,7 +12,11 @@ func EndHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func HelloHandler(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "Hello World!!")
+	tmpl, err := template.ParseFiles("index.html")
+	if err != nil {
+		fmt.Println("template No Such")
+	}
+	tmpl.Execute(w, nil)
 }
 
 func main() {
