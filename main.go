@@ -21,6 +21,5 @@ func HelloHandler(w http.ResponseWriter, r *http.Request) {
 
 func main() {
 	http.HandleFunc("/", HelloHandler)
-	http.HandleFunc("/end", EndHandler)
 	log.Fatal(http.ListenAndServe("localhost:8080", nil))
 }
