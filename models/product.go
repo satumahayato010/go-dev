@@ -2,8 +2,8 @@ package models
 
 import "github.com/jinzhu/gorm"
 
-type Post struct {
+type Product struct {
 	gorm.Model
-	Title string
-	Body  string
+	Code    string
+	Product uint
 }
