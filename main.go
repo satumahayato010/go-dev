@@ -1,22 +1,25 @@
 package main
 
-import (
-	"bufio"
-	"os"
-	"strconv"
-)
+import "fmt"
 
-func stdin() int {
-	sc := bufio.NewScanner(os.Stdin)
+func twoSum(nums []int, target int) []int {
+	lookup := make(map[int]int)
 
-	sc.Scan()
-	var entry, _ = strconv.Atoi(sc.Text())
-	return entry
-}
+	for i, v := range nums {
+		j, ok := lookup[-v]
+		lookup[v-target] = i
 
-func shareCalculation(entry string) {
-
+		if ok {
+			return []int{j, i}
+		}
+	}
+	return []int{}
 }
 
 func main() {
+	//nums := []int{2, 7, 11, 15}
+	nums2 := []int{3, 2, 4}
+	target := 6
+	output := twoSum(nums2, target)
+	fmt.Println(output)
 }
