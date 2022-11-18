@@ -3,31 +3,34 @@ package main
 import (
 	"fmt"
 	"math/rand"
+	"time"
 )
 
-func inOrder(nums []int) bool {
-	for i := 0; i < len(nums)-1; i++ {
-		if nums[i] > nums[i+1] {
-			return false
+func shellSort(nums []int) []int {
+	lenNums := len(nums)
+	gap := lenNums / 2
+	for gap > 0 {
+		for i := gap; i < lenNums; i++ {
+			temp := nums[i]
+			j := i
+			for j >= gap && nums[j-gap] > temp {
+				nums[j] = nums[j-gap]
+				j -= gap
+			}
+			nums[j] = temp
 		}
+		gap /= 2
 	}
-	return true
-}
-
-func shuffle(nums []int) {
-	rand.Shuffle(len(nums), func(i, j int) {
-		nums[i], nums[j] = nums[j], nums[i]
-	})
-}
-
-func bogoSort(nums []int) {
-	for !inOrder(nums) {
-		shuffle(nums)
-	}
+	return nums
 }
 
 func main() {
-	nums := []int{1, 5, 3, 2, 6}
-	bogoSort(nums)
-	fmt.Println(nums)
+
+	var nums []int
+	rand.Seed(time.Now().UnixNano())
+	for i := 0; i < 10; i++ {
+		nums = append(nums, rand.Intn(100))
+	}
+
+	fmt.Println(shellSort(nums))
 }
