@@ -1,36 +1,19 @@
 package main
 
-import (
-	"fmt"
-	"math/rand"
-	"time"
-)
+type Node struct {
+	data int
+	next *Node
+}
 
-func shellSort(nums []int) []int {
-	lenNums := len(nums)
-	gap := lenNums / 2
-	for gap > 0 {
-		for i := gap; i < lenNums; i++ {
-			temp := nums[i]
-			j := i
-			for j >= gap && nums[j-gap] > temp {
-				nums[j] = nums[j-gap]
-				j -= gap
-			}
-			nums[j] = temp
-		}
-		gap /= 2
+type LinkedList struct {
+	head int
+}
+
+func (li *LinkedList) append(data int) {
+	if li.head == 0 {
+
 	}
-	return nums
 }
 
 func main() {
-
-	var nums []int
-	rand.Seed(time.Now().UnixNano())
-	for i := 0; i < 10; i++ {
-		nums = append(nums, rand.Intn(100))
-	}
-
-	fmt.Println(shellSort(nums))
 }
