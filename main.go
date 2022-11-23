@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	nums := []int{1, 2, 3, 3}
-	output := data_structure.ContainsDuplicate(nums)
+	nums := []int{-2, 1, -3, 4, -1, 2, 1, -5, 4}
+	output := data_structure.MaxSubArray(nums)
 	fmt.Println(output)
 }
