@@ -2,11 +2,12 @@ package main
 
 import (
 	"fmt"
-	"go-dev/data-structure"
+	data_structure "go-dev/data-structure"
 )
 
 func main() {
-	nums := []int{-2, 1, -3, 4, -1, 2, 1, -5, 4}
-	output := data_structure.MaxSubArray(nums)
+	nums := []int{3, 3}
+	target := 6
+	output := data_structure.TwoSum(nums, target)
 	fmt.Println(output)
 }
