@@ -1,39 +1,19 @@
 package main
 
-import "fmt"
-
-type Set struct {
-	items map[int]struct{}
-}
-
-func NewSet() *Set {
-	return &Set{items: make(map[int]struct{})}
-}
-
-func (s *Set) Add(val int) {
-	s.items[val] = struct{}{}
-}
-
-func (s *Set) Has(val int) bool {
-	_, ok := s.items[val]
-	return ok
-}
-
-func containsDuplicate(nums []int) bool {
-	set := NewSet()
-
-	for _, num := range nums {
-		if set.Has(num) {
-			return true
+func maxSubArray(nums []int) int {
+	maxSum, curSum := nums[0], nums[0]
+	for i := 1; i < len(nums); i++ {
+		if curSum < 0 {
+			curSum = nums[i]
+		} else {
+			curSum += nums[i]
 		}
-		set.Add(num)
-		fmt.Println(set)
+		if maxSum < curSum {
+			maxSum = curSum
+		}
 	}
-	return false
+	return maxSum
 }
 
 func main() {
-	nums := []int{1, 2, 3, 4, 1}
-	output := containsDuplicate(nums)
-	fmt.Println(output)
 }
