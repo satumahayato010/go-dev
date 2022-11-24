@@ -6,8 +6,7 @@ import (
 )
 
 func main() {
-	nums := []int{3, 3}
-	target := 6
-	output := data_structure.TwoSum(nums, target)
-	fmt.Println(output)
+	nums1, nums2 := []int{1, 2, 3, 0, 0, 0}, []int{2, 5, 6}
+	data_structure.Merge(nums1, 3, nums2, 3)
+	fmt.Println(nums1)
 }
