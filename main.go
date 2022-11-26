@@ -2,11 +2,13 @@ package main
 
 import (
 	"fmt"
-	data_structure "go-dev/data-structure"
+	"go-dev/algorithm"
 )
 
 func main() {
-	nums1, nums2 := []int{1, 2, 3, 0, 0, 0}, []int{2, 5, 6}
-	data_structure.Merge(nums1, 3, nums2, 3)
-	fmt.Println(nums1)
+	nums1 := []int{-1, 0, 3, 5, 9, 12}
+	target := 9
+	low, high := 0, len(nums1)-1
+	output := algorithm.BinarySearchRecursive(nums1, target, low, high)
+	fmt.Println(output)
 }
