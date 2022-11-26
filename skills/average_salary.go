@@ -1,4 +1,4 @@
-package algorithm
+package skills
 
 /*
 Average Salary Excluding the Minimum and Maximum Salary
