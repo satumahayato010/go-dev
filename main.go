@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	low, high := 3, 7
-	output := algorithm.CountOdds(low, high)
+	salary := []int{1000, 2000, 3000}
+	output := algorithm.Average(salary)
 	fmt.Println(output)
 }
