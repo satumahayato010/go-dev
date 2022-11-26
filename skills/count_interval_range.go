@@ -1,4 +1,4 @@
-package algorithm
+package skills
 
 /*
 Count Odd Numbers in an Interval Range
