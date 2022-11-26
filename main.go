@@ -6,9 +6,7 @@ import (
 )
 
 func main() {
-	nums := []int{1, 3, 5, 6}
-	target := 7
-	output := algorithm.SearchInsert(nums, target)
+	low, high := 3, 7
+	output := algorithm.CountOdds(low, high)
 	fmt.Println(output)
-
 }
