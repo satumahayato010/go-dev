@@ -1,7 +1,6 @@
 package data_structure
 
 import (
-	"fmt"
 	"sort"
 )
 
@@ -28,15 +27,12 @@ func Merge(nums1 []int, m int, nums2 []int, n int) {
 }
 
 func Merge2(nums1 []int, m int, nums2 []int, n int) {
-	fmt.Println(nums1, nums2)
 	for n > 0 {
 		if m == 0 || nums1[m-1] <= nums2[n-1] {
 			nums1[m+n-1] = nums2[n-1]
-			fmt.Println(nums1, nums2)
 			n -= 1
 		} else {
 			nums1[m+n-1] = nums1[m-1]
-			fmt.Println(nums1, nums2, 1)
 			m -= 1
 		}
 	}
