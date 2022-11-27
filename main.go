@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	nums1, nums2 := []int{4, 9, 5}, []int{9, 4, 9, 8, 5}
-	output := data_structure.Intersect(nums1, nums2)
+	prices := []int{7, 6, 4, 3, 1}
+	output := data_structure.MaxProfit(prices)
 	fmt.Println(output)
 }
