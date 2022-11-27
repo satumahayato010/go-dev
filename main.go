@@ -2,11 +2,11 @@ package main
 
 import (
 	"fmt"
-	"go-dev/code75"
+	data_structure "go-dev/data-structure"
 )
 
 func main() {
-	nums := []int{1, 2, 3, 4}
-	output := code75.RunningSum(nums)
+	nums1, nums2 := []int{4, 9, 5}, []int{9, 4, 9, 8, 5}
+	output := data_structure.Intersect(nums1, nums2)
 	fmt.Println(output)
 }
