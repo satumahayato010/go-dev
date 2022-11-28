@@ -1,7 +1,5 @@
 package code75
 
-import "fmt"
-
 /*
 Isomorphic Strings
 2つの文字列sとtがあるとき、それらが同型であるかどうかを判定せよ。
@@ -18,12 +16,10 @@ func IsIsomorphic(s, t string) bool {
 
 	for idx := range s {
 		if sPat[s[idx]] != tPat[t[idx]] {
-			fmt.Println(sPat, tPat, "#1")
 			return false
 		} else {
 			sPat[s[idx]] = idx + 1
 			tPat[t[idx]] = idx + 1
-			fmt.Println(sPat, tPat, "#2")
 		}
 	}
 	return true
