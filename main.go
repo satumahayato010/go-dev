@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	nums := []int{1, 7, 3, 6, 5, 6}
-	output := code75.PivotIndex(nums)
+	s, t := "egg", "add"
+	output := code75.IsIsomorphic(s, t)
 	fmt.Println(output)
 }
