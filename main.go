@@ -2,11 +2,11 @@ package main
 
 import (
 	"fmt"
-	data_structure "go-dev/data-structure"
+	"go-dev/code75"
 )
 
 func main() {
-	prices := []int{7, 6, 4, 3, 1}
-	output := data_structure.MaxProfit(prices)
+	nums := []int{1, 7, 3, 6, 5, 6}
+	output := code75.PivotIndex(nums)
 	fmt.Println(output)
 }
