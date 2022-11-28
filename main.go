@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	s, t := "egg", "add"
-	output := code75.IsIsomorphic(s, t)
+	s, t := "abc", "ahbgdc"
+	output := code75.IsSubsequence(s, t)
 	fmt.Println(output)
 }
