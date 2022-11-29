@@ -6,7 +6,8 @@ import (
 )
 
 func main() {
-	nums := []int{-4, -1, 0, 3, 10}
-	output := algorithm.SortedSquares(nums)
-	fmt.Println(output)
+	nums := []int{1, 2, 3, 4, 5, 6, 7}
+	k := 3
+	algorithm.Rotate(nums, k)
+	fmt.Println(nums)
 }
