@@ -1,4 +1,4 @@
-package algorithm
+package binary_search
 
 /*
 Binary Search
