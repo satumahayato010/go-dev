@@ -2,11 +2,11 @@ package main
 
 import (
 	"fmt"
-	"go-dev/code75"
+	"go-dev/algorithm"
 )
 
 func main() {
-	s, t := "abc", "ahbgdc"
-	output := code75.IsSubsequence(s, t)
+	nums := []int{-4, -1, 0, 3, 10}
+	output := algorithm.SortedSquares(nums)
 	fmt.Println(output)
 }
