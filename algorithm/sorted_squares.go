@@ -27,3 +27,7 @@ func SortedSquares(nums []int) []int {
 	}
 	return outArr
 }
+
+// TODO
+// FIXME
+// NOTE
