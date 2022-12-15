@@ -1,10 +1,13 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"go-dev/code75"
+)
 
 func main() {
-	nums := []int{1, 2, 3, 4, 5, 6, 7}
-	k := 3
-	algorithm.Rotate(nums, k)
-	fmt.Println(nums)
+	list1 := &code75.ListNode{Val: 1, Next: &code75.ListNode{Val: 2, Next: &code75.ListNode{Val: 4}}}
+	list2 := &code75.ListNode{Val: 1, Next: &code75.ListNode{Val: 3, Next: &code75.ListNode{Val: 4}}}
+	output := code75.MergeTwoLists(list1, list2)
+	fmt.Println(output)
 }
