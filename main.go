@@ -6,8 +6,18 @@ import (
 )
 
 func main() {
-	list1 := &code75.ListNode{Val: 1, Next: &code75.ListNode{Val: 2, Next: &code75.ListNode{Val: 4}}}
-	list2 := &code75.ListNode{Val: 1, Next: &code75.ListNode{Val: 3, Next: &code75.ListNode{Val: 4}}}
-	output := code75.MergeTwoLists(list1, list2)
-	fmt.Println(output)
+	root := &code75.Node{
+		Val: 1,
+		Children: []*code75.Node{
+			&code75.Node{Val: 3, Children: []*code75.Node{
+				&code75.Node{Val: 5},
+				&code75.Node{Val: 6},
+			}},
+			&code75.Node{Val: 2},
+			&code75.Node{Val: 4},
+		},
+	}
+
+	result := code75.Preorder(root)
+	fmt.Println(result)
 }
