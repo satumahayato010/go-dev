@@ -6,18 +6,22 @@ import (
 )
 
 func main() {
-	root := &code75.Node{
-		Val: 1,
-		Children: []*code75.Node{
-			&code75.Node{Val: 3, Children: []*code75.Node{
-				&code75.Node{Val: 5},
-				&code75.Node{Val: 6},
-			}},
-			&code75.Node{Val: 2},
-			&code75.Node{Val: 4},
+	root := &code75.TreeNode{
+		Val: 3,
+		Left: &code75.TreeNode{
+			Val: 9,
+		},
+		Right: &code75.TreeNode{
+			Val: 20,
+			Left: &code75.TreeNode{
+				Val: 15,
+			},
+			Right: &code75.TreeNode{
+				Val: 7,
+			},
 		},
 	}
 
-	result := code75.Preorder(root)
+	result := code75.LevelOrder(root)
 	fmt.Println(result)
 }
