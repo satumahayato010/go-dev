@@ -28,6 +28,13 @@ func SortedSquares(nums []int) []int {
 	return outArr
 }
 
-// TODO
-// FIXME
-// NOTE
+/*
+logic
+1.配列のすべての要素を2乗して、その結果を同じ配列内に格納します
+2.numsと同じ長さの新しい配列outArrが作成
+3.2つのポインター、leftとrightを定義しますleftポインターは配列の先頭を指し、right ポインターは配列の末尾を指します。
+4.配列の末尾から前に向かって繰り返し処理を行います。そのために、 forループを使用して、iをlen(nums) - 1 から 0 までデクリメントします。
+5. left ポインターが指す値と right ポインターが指す値を比較します。
+6.nums[left] の方が大きい場合、 outArr[i] に nums[left] を代入し、 left ポインターを1つ進めます。そうでなければ、 outArr[i] に nums[right] を代入し、 right ポインターを1つ戻します。
+7.最後に、 outArr を返します。これにより、入力された配列を2乗して昇順に並べ直したものが得られます。
+*/
