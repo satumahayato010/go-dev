@@ -7,21 +7,14 @@ import (
 
 func main() {
 	root := &code75.TreeNode{
-		Val: 3,
+		Val: 2,
 		Left: &code75.TreeNode{
-			Val: 9,
+			Val: 1,
 		},
 		Right: &code75.TreeNode{
-			Val: 20,
-			Left: &code75.TreeNode{
-				Val: 15,
-			},
-			Right: &code75.TreeNode{
-				Val: 7,
-			},
+			Val: 3,
 		},
 	}
-
-	result := code75.LevelOrder(root)
+	result := code75.IsValidBST(root)
 	fmt.Println(result)
 }
